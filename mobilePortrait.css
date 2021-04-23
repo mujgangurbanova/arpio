@@ -550,3 +550,23 @@ img{
 }
 
 
+.message-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background-color: rgb(255,64,0);
+    border: 1 px solid #FF4000;
+    border: none;
+    box-shadow: -5px -5px 5px  rgba(0, 0, 0, .4);
+}
+
+.fas{
+
+
+}
+
