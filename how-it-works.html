@@ -37,34 +37,167 @@
       </div>
     </nav>
     <section class="how-it-works">
-        <h6>How arpio works</h6>
-        <h2>Cross-Region & Cross-Account Recovery</h2>
-        <p>Arpio curates an exact replica of your entire AWS environment – including data & infrastructure – enabling rapid failover that eliminates downtime.</p>
+      <h6>How Arpio Works</h6>
+      <h2>Cross-Region & Cross-Account Recovery</h2>
+      <p>
+        Arpio curates an exact replica of your entire AWS environment –
+        including data & infrastructure – enabling rapid failover that
+        eliminates downtime.
+      </p>
 
-        <button class="play-button">
-            <span>Play video</span>
+      <button class="play-button">
+        <span>Play video</span>
+        <i class="fas fa-play"></i>
+      </button>
+
+      <div class="commercial">
+        <div class="oval oval1"></div>
+        <div class="oval oval2"></div>
+        <div class="oval oval3"></div>
+
+        <div class="image">
+          <img src="images/video-screen.jpg" alt="image" />
+          <button class="play">
             <i class="fas fa-play"></i>
-        </button>
-
-        <div class="commercial">
-            <div class="oval oval1"></div>
-            <div class="oval oval2"></div>
-            <div class="oval oval3"></div>
-
-            <div class="image">
-                <img src="images/video-screen.jpg" alt="">
-                <button>play</button>
-                <i class="fas fa-play"></i>
-
-            </div>
+          </button>
         </div>
+      </div>
 
-        <h3 class="steps">5 steps to using arpio</h3>
-
-        <div class="item">
-            <div class="item-number">1</div>
-            <div class="item-content"></div>
+      <h3 class="steps">5 Steps to Using Arpio</h3>
+      <div class="item">
+        <div class="item-number">1</div>
+        <div class="item-content">
+          <h4>Connect Arpio to your AWS environment</h4>
+          <p>
+            Arpio orchestrates cross-region and cross-account recovery within
+            your AWS environment. To get started, we’ll generate a
+            CloudFormation template that you’ll install to grant us minimal
+            access.
+          </p>
+          <p>
+            <strong>Is this secure?</strong>
+            <br />
+            Yes. We can’t access your data, share your data externally, or do
+            destructive things in your production environment. Our access allows
+            us to survey your infrastructure, instruct AWS to copy your data to
+            your recovery environment, and re-create everything as necessary.
+            Your environment is safe because we’ve engineered Arpio to not need
+            unsafe access.
+          </p>
         </div>
+      </div>
+
+      <div class="item">
+        <div class="item-number">2</div>
+        <div class="item-content">
+          <h4>Select resources to protect</h4>
+          <p>
+            Once connected, Arpio presents a list of resources within your
+            production environment. Your last task is to select resources that
+            are important for your workload.
+          </p>
+          <p>
+            You’ll only need to specify a couple of top-level resources. Arpio
+            understands AWS dependencies, and we’ll find the rest for you. For
+            example, point us at a load balancer and we’ll find the servers,
+            subnets, SSL cert, security groups, and everything else needed to
+            protect that entire workload.
+          </p>
+          <p>
+            <strong>Which AWS resource types does Arpio support?</strong>
+            <br />
+            Arpio works today with resources from EC2, EBS, RDS, ECS, ECR, ELB,
+            VPC, IAM, ACM, Autoscaling, Cognito, ElastiCache, Elastic Beanstalk,
+            and CloudWatch. We’re launching EFS and EKS next. If we don’t yet
+            support your workload, let us know and we can make it a priority.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-number">3</div>
+        <div class="item-content">
+          <h4>Arpio starts to replicate your environment</h4>
+          <p>
+            At this point, Arpio takes over and captures your first “recovery
+            point.” A recovery point is a snapshot of your entire environment
+            (infrastructure & data). Arpio copies the recovery point directly to
+            your recovery environment. Data never leaves your accounts.
+          </p>
+          <p>
+            Once the recovery point is copied, Arpio will create the no-cost AWS
+            resources immediately. Resources that cost money won’t get created
+            until you need them.
+          </p>
+          <p>
+            <strong>Where is my data stored? </strong>
+            <br />
+            Your data is stored in your recovery account in the recovery region.
+            For most services, we use the native cold-storage provided by the
+            service. For example, EBS data is stored as EBS snapshots where it
+            can be quickly recovered when you need it.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-number">4</div>
+        <div class="item-content">
+          <h4>Run a test</h4>
+          <p>
+            Once your first recovery point is created, it’s time to run a test.
+            Simply click “test” in the Arpio UI to bring up your entire recovery
+            environment as quickly as AWS can launch your servers. When you’ve
+            validated that’s it working, another button quickly tears it down so
+            you won’t have to pay for it.
+          </p>
+
+          <p>
+            <strong>Will my application work?</strong>
+            <br />
+            Most applications work on first launch, but sometimes a little
+            troubleshooting may be required. Arpio does a pretty great job of
+            creating an identical environment, reconnecting all infrastructure
+            and preserving endpoints like IP addresses. Arpio also creates DNS
+            aliases for RDS databases and ElastiCache nodes so your database
+            connection details are still valid in your recovery environment.
+          </p>
+          <p>
+            <strong>Will this impact my production workload?</strong>
+            <br />
+            No. Your real users will continue hitting your production
+            environment at this time. Arpio is just spinning up a replica for
+            you to test.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-number">5</div>
+        <div class="item-content">
+          <h4>Failover when needed</h4>
+          <p>
+            When you need it, Arpio is standing by to restore your service. One
+            click in the Arpio UI will bring up your entire recovery environment
+            in minutes.
+          </p>
+          <p>
+            <strong>If my region is down, will Arpio still work?</strong>
+            <br />
+            Yes. Arpio runs redundantly across 3 AWS regions, and we don’t
+            protect your production environment from your production region.
+          </p>
+          <p>
+            <strong>Does Arpio update my DNS records?</strong>
+            <br />
+            The last step of any failover is to update DNS to point at the
+            recovered environment. We leave that step to you so that you can
+            validate it’s working before moving traffic over. But we expose
+            every new load balancer endpoint, elastic IP, and public server
+            address in our UI so those details are convenient.
+          </p>
+        </div>
+      </div>
     </section>
   </body>
 </html>
